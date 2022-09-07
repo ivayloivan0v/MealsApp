@@ -2,10 +2,11 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { MEALS } from "../data/dummy-data";
 
-export const MealsOverviewScreen = () => {
+export const MealsOverviewScreen = ({ route }) => {
+  const catID = route.params.categoryId;
   return (
     <View style={styles.container}>
-      <Text>Meals Overview Screen</Text>
+      <Text>Meals Overview Screen - {catID}</Text>
     </View>
   );
 };

@@ -6,7 +6,9 @@ import { CATEGORIES } from "../data/dummy-data";
 export const CategoriesScreen = ({ navigation }) => {
   const renderCategoryItem = (itemData) => {
     const pressedHandler = () => {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
     };
     return (
       <CategoryGridTile
